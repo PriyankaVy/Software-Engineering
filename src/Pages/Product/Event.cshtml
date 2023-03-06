@@ -1,0 +1,48 @@
+﻿@page
+@model ContosoCrafts.WebSite.Pages.EventModel
+@{
+    ViewData["Title"] = " Events ";
+}
+
+<html lang="en">
+
+<body class="crud">
+
+    <div class="container">
+        <main role="main" class="pb-3">
+
+            <div class="container">
+
+                <a asp-page="Create">+ Create </a>
+
+                <table class="table table-bordered table-striped">
+
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        @foreach (var product in Model.Products)
+                        {
+                            <tr>
+                                <td>@product.Title</td>
+                                <td><a asp-page="Read" asp-route-id="@product.Id">Read</a></td>
+                            </tr>
+                        }
+                    </tbody>
+
+                </table>
+
+            </div>
+        </main>
+    </div>
+
+    <script src="/lib/jquery/dist/jquery.js"></script>
+    <script src="/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="/js/site.js?v=dLGP40S79Xnx6GqUthRF6NWvjvhQ1nOvdVSwaNcgG18"></script>
+
+</body>
+</html>

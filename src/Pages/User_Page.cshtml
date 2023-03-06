@@ -1,0 +1,14 @@
+﻿@page
+@using ContosoCrafts.WebSite.Components;
+@model ContosoCrafts.WebSite.Pages.Index1Model
+@{
+    ViewData["Title"] = "User Page";
+}
+
+<body class="ix" align="center">
+
+    @(await Html.RenderComponentAsync<ProductList>(RenderMode.ServerPrerendered))
+
+</body>
+
+<script src="_framework/blazor.server.js"></script>

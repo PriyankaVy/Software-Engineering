@@ -1,0 +1,188 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<body class="ix" align="center">
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <div class="numbertext">1 / 4</div>
+            <img src="https://i.cbc.ca/1.3209819.1441050661!/fileImage/httpImage/image.jpg_gen/derivatives/16x9_780/back-to-school-2015-mandatory-volunteer-hours.jpg" style="width:100%">
+            <div class="text"><h1> Outcome:Planting 100 Trees in seattle area with the help of 50 voulanteer members Place:Seattle </h1> </div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 4</div>
+            <img src="https://th.bing.com/th/id/R.ae7eb831f37e41d1b1aa7e9440ba3311?rik=EqH0NFzVHIHEYg&riu=http%3a%2f%2fwww.volunteerworkindia.org%2fwp-content%2fuploads%2f2017%2f04%2fTeaching-Volunteer-project-in-India.jpg&ehk=8rXjDc%2b%2b9ZBSnSc9AxCTgZVZ4lgPUzszvRqX6IlsC4Y%3d&risl=1&pid=ImgRaw&r=0" style="width:100%">
+            <div class="text"><h1>Outcome:Educating around 50 Children in Child society home with the help of 25 volunteer members Place:Portland </h1></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">3 / 4</div>
+            <img src="https://rs.projects-abroad.org/v1/hero/product-5c643aca6c82d.[1600].jpeg" style="width:100%">
+            <div class="text"><h1>Outcome:Medical camp in High School during summer with the help of volunteers and interns Place:Atlanta</h1></div>
+        </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext"> 4 / 4</div>
+            <img src="https://intermountainhealthcare.org/-/media/images/modules/blog/posts/2019/03/volunteering-is-good-for-you-and-your-kids.jpg?mw=1600" style="width:100%">
+            <div class="text"><h1>Outcome:Group of volunteers collecting garbage in the sea area. Place:Alaska</h1></div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">❮</a>
+        <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+
+    <br>
+
+    <!-- The dots/circles -->
+    <div class="hg">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) { slideIndex = 1 }
+            slides[slideIndex - 1].style.display = "block";
+            setTimeout(showSlides, 3000); // Change image every 2 seconds
+        }
+
+    </script>
+
+    <h1><b>What is Helping Hands?</b></h1>
+
+    <p>
+        <i>
+            “Helping Hands” we stand-out by tailoring our organization-youth matching services to include the desired skills the youth volunteers would like to develop. Helping Hands is a non-profit organization in the United States of America. Established in 2022 by enabling the social sector to unlock over $14 billion worth of volunteer time.
+            The award-winning nonprofit service has complemented and co-existed with commercial technologies to become the web’s largest  Our team of experienced professionals works together to form healthy relationships between nonprofit organizations and volunteers or students who are looking for a community service placement.
+            We believe it is important to listen to the hopes and dreams of the people and offer resources and tools to those whom society has deemed as deficit leaders and we offer tools to which they can see themselves as leaders. Our goal is to help others overcome their limitations and break the barrier of life challenges.
+        </i>
+    </p>
+
+    <h4>Mission</h4>
+
+    <p>
+        <i>
+            VolunteerMatch believes that volunteering can change lives – starting with yours. When we connect with our communities and each other through service we can find our passion and purpose, build camaraderie and hope, and experience joy and gratitude. Every person deserves an opportunity to be a part of the greater good.
+        </i>
+    </p>
+
+    <h4>Purpose</h4>
+
+    <p>
+        <i>
+            Bring people and communities together through service.
+        </i>
+    </p>
+
+    <h4>Vision</h4>
+
+    <p>
+        <i>
+            The digital infrastructure that strengthens the ethos and impact of volunteering at scale.
+        </i>
+    </p>
+
+    <h4>Guiding Principles</h4>
+
+    <p>
+        <i>
+            Service | Integrity | Urgency | Collaboration | Growth
+        </i>
+    </p>
+
+    <br />
+    <br />
+
+    <a asp-page="User_Page" class="user_btn">Go to Events</a>
+
+    <script src="_framework/blazor.server.js"></script>
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1 style=" text-align:center"><b>Our Partners</b></h1>
+
+    <div class="container">
+
+        <div class="preview">
+            <a href="https://www.seattleu.edu/scieng/computer-science/faculty-and-staff/profiles/koenig-michael.html">
+                <img class="partner-image" src="https://th.bing.com/th/id/R.8ee2a21e3b4668ddb92691e2e677c2ce?rik=Ono5Vg825lN2pg&riu=http%3a%2f%2fwww.seattleu.edu%2fmedia%2fcollege-of-science-and-engineering%2fimages%2fdepartments%2fcomputerscience%2fMichaelKoenig_CSHeadshots_CCK_-32_1.jpg&ehk=c0mEOs%2fMyg8wveVw1kZb%2bvCCBcrBrOh6zR4bd93TwgI%3d&risl=&pid=ImgRaw&r=0" />
+            </a>
+        </div>
+
+        <div class="preview">
+            <a href="https://www.seattleu.edu/scieng/about/faculty-and-staff/profiles/mckee-michael.html">
+                <img class="partner-image" src="https://th.bing.com/th/id/R.2d33110cd58f1cb380b014ffa563961a?rik=goxmEJbkXVmLzg&riu=http%3a%2f%2fwww.seattleu.edu%2fmedia%2fcollege-of-science-and-engineering%2fimages%2fdepartments%2fcomputerscience%2fMikeMcKee200x300.jpg&ehk=%2fkklnM3dHUIR0qBMBKIRdf19EdEpx6IyrZrFaEJ3E6k%3d&risl=&pid=ImgRaw&r=0" />
+            </a>
+        </div>
+
+        <div class="preview">
+            <a href="http://collegehunkshaulingjunk.com/junk-removal">
+                <img class="partner-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgZ1Kv4xiz5xAH60-GIUooF_DETF-nWtXtjo_mGtP7TjQHzTpKbYbJ96v31dOxGWzJ5xQ&usqp=CAU" />
+            </a>
+        </div>
+
+        <div class="preview">
+            <a href="https://www.instagram.com/seattleu/">
+                <img class="partner-image" src="https://th.bing.com/th/id/OIP.vVBHvUTzXuPNovUTHD0D8QHaHa?w=186&h=186&c=7&r=0&o=5&dpr=1.5&pid=1.7" />
+            </a>
+        </div>
+
+        <div class="preview">
+            <a href="https://www.facebook.com/seattleu">
+                <img class="partner-image" src="https://th.bing.com/th/id/OIP.5Wm2l9foUpPcFI9dWplqdQHaG3?w=203&h=188&c=7&r=0&o=5&dpr=1.5&pid=1.7" />
+            </a>
+        </div>
+
+        <div class="preview">
+            <a href="https://www.linkedin.com/school/seattle-university/mycompany/">
+                <img class="partner-image" src="https://th.bing.com/th?q=Official+LinkedIn+Logo+Vector&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.5&pid=InlineBlock&mkt=en-US&cc=US&setlang=en&adlt=strict&t=1&mw=247=" />
+            </a>
+        </div>
+
+        <div class="preview">
+            <a href="https://twitter.com/seattleu">
+                <img class="partner-image" src="https://th.bing.com/th/id/OIP.T9W8FR0DLy4WuS8DKub7AgHaFj?w=232&h=180&c=7&r=0&o=5&dpr=1.5&pid=1.7=" />
+            </a>
+        </div>
+
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+
+    <footer class="border-top footer text-muted bg-footer">
+        <div class="container">
+            © 2022 - Helping Hands.WebSite -
+            <a asp-page="/Privacy">Privacy</a> |
+            <a asp-page="/Whoweare">Who we are?</a> |
+            <a asp-page="/Faq">FAQ?</a> |
+            <a asp-page="/Contact_Us">Contact Us</a>
+        </div>
+    </footer>
+
+</body>

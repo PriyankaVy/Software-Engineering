@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Helping Hands - @ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="https://fonts.googleapis.com/css?family=Yellowtail&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=RobotoSlab&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="https://helpinghandsbehaviourtherapy.com/wp-content/uploads/2020/06/Helping-Hands-logo-textless-1.png" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-navbar border-bottom box-shadow mb-3">
+            <div class="container">
+
+                <div class="logo-image" href="#">
+                    <img src="https://helpinghandsbehaviourtherapy.com/wp-content/uploads/2020/06/Helping-Hands-logo-textless-1.png" class="img-fluid">
+                </div>
+
+                <a class="navbar-brand px-2" asp-area="" asp-page="/Index">Helping Hands</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
+
+                    <ul class="navbar-nav ml-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/Product/Event">Events</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-page="/About">About Us</a>
+                        </li>
+
+                        <li class="navbar-brand px-2">
+                            <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+                            <a class="btn2 btn-success" asp-area="" asp-page="/donate">
+                                DONATE
+                                <i class="fa fa-tshirt"></i>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+    </header>
+
+    <div class="container">
+
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>
